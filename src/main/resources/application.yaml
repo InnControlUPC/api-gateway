@@ -16,6 +16,22 @@ spring:
               uri: lb://user-service
               predicates:
                 - Path=/api/v1/users/**
+            - id: tasks-service
+              uri: lb://tasks-service
+              predicates:
+                - Path=/api/v1/tasks/**
+            - id: room-service
+              uri: lb://room-service
+              predicates:
+                - Path=/api/v1/room/**
+            - id: inventory-service
+              uri: lb://inventory-service
+              predicates:
+                - Path=/api/v1/inventory/**
+            - id: employees-service
+              uri: lb://employees-service
+              predicates:
+                - Path=/api/v1/employees/**
             - id: notifications-service
               uri: lb://notifications-service
               predicates:
