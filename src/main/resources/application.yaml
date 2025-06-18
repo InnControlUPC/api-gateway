@@ -12,10 +12,10 @@ spring:
               lower-case-service-id: true
               route-id-prefix: ${spring.application.name}
           routes:
-            - id: user-service
-              uri: lb://user-service
+            - id: iam-service
+              uri: lb://iam-service
               predicates:
-                - Path=/api/v1/users/**
+                - Path=/api/v1/authentication/**
             - id: tasks-service
               uri: lb://tasks-service
               predicates:
