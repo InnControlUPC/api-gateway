@@ -4,6 +4,20 @@ spring:
 
   cloud:
     gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+              - PATCH
+            allowedHeaders: "*"
+            allowCredentials: true
+
       server:
         webflux:
           discovery:
@@ -77,3 +91,4 @@ logging:
     org.springframework.cloud.netflix.eureka: DEBUG
     com.netflix.discovery: DEBUG
     com.github.inncontrol: DEBUG
+
