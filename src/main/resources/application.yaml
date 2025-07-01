@@ -40,6 +40,10 @@ spring:
               uri: lb://profile-service
               predicates:
                 - Path=/api/v1/profiles/**
+            - id: communications-service
+              uri: lb://communications-service
+              predicates:
+                - Path=/api/v1/messages/**
 
 eureka:
   instance:
@@ -56,6 +60,14 @@ springdoc:
         url: /api/v1/tasks/docs
       - name: Profiles Service
         url: /api/v1/profiles/docs
+      - name: Inventory Service
+        url: /api/v1/inventory/docs
+      - name: IAM Service
+        url: /api/v1/authentication/docs
+      - name: Employee Service
+        url: /api/v1/employees/docs
+      - name: Communications Service
+        url: /api/v1/messages/docs
   api-docs:
     enabled: true
 
