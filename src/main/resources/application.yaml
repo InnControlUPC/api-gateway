@@ -52,12 +52,10 @@ eureka:
 springdoc:
   swagger-ui:
     urls:
-        - name: Communcations Service
-          url: /api/v1/communications/docs
-        - name: Employee Service
-          url: /api/v1/employees/docs
-        - name: Iam Service
-          url: /api/v1/authentication/docs
+      - name: Task Service
+        url: /api/v1/tasks/docs
+      - name: Profiles Service
+        url: /api/v1/profiles/docs
   api-docs:
     enabled: true
 
